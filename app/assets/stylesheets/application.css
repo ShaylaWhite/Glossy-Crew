@@ -27,12 +27,12 @@
   }
 
   header {
-    background: grey;
+    background: rgb(255, 151, 151);
     padding: 10px;
     ul {
       margin: 0;
       padding: 0;
-      list-style-type: none;
+      list-style-type: square;
     }
     a {
       text-decoration: none;
