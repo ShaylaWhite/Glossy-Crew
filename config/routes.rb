@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get '/' => 'sessions#home'
+  
+  
   resources :reviews
   resources :lip_glosses
   resources :sponsors
