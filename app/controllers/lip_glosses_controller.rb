@@ -1,0 +1,2 @@
+class LipGlossesController < ApplicationController
+end
