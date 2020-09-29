@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-    def home
+    def welcome
 
     end 
 
