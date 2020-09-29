@@ -19,6 +19,9 @@ def index
    @lip_gloss = LipGloss.all
 end
 
+def edit
+   @lip_gloss = LipGloss.find(params[:id])
+ end
 
 def show
    @lip_gloss = LipGloss.find(params[:id])
