@@ -1,0 +1,14 @@
+
+<% if @lip_gloss.blank? %>
+<p>There are not any Lip Gloss currently in the system.</p>
+<% else %>
+<p><h1> All Lip Gloss </h1></p>
+
+<ul id = "lip_gloss">
+   <% @lip_gloss.each do |c| %>
+   <li><%= link_to c.name, {:action => 'show', :id => c.id} -%></li>
+   <% end %>
+</ul>
+
+<% end %>
+<p><%= link_to "Add a New Gloss", {:action => 'new' }%></p>

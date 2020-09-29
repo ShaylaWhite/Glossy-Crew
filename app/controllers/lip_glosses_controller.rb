@@ -15,7 +15,14 @@ def create
      end
 end 
 
+def index
+   @lip_gloss = LipGloss.all
+end
 
+
+def show
+   @lip_gloss = LipGloss.find(params[:id])
+end 
 
 
  private
