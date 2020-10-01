@@ -21,12 +21,19 @@
     text-align: center;
     font-size: 60px;
     font-family: 'Alex Brush', cursive; 
-    color: rgb(255, 151, 151);
+    
   }
   .content {
     margin: 10px auto;
     width: 70%;
    
+  }
+  
+  li {
+    text-align: center;
+    font-size: 20px;
+    list-style-type: none;
+
   }
   
   .clearfix {
@@ -61,6 +68,7 @@
     margin-left:auto;
     margin-right:auto;
     width:200px;
+   
  }
 
  
@@ -68,4 +76,5 @@
   margin-left:auto;
   margin-right:auto;
   width:200px;
+ 
 }

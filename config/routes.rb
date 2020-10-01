@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
   
   resources :reviews
-  resources :lip_glosses
+  resources :lip_glosses do
+    resources :reviews, only: [:new, :index, ]
+  end 
   resources :sponsors
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
