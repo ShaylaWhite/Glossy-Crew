@@ -1,4 +1,9 @@
 <div class="form">
+
+You are Reviewing : <%@review.lip_gloss.name%>
+<hr>
+Sponsored by : <%= @review.lip_gloss.sponsor.name %>
+<hr>
 <%= form_for(@review) do |f|%>
 
   <p><i> Is this gloss worth the purchase? <br> <br> Select if 'yes' </p></i>
@@ -8,7 +13,7 @@
    <p><i> What are your thoughts about this gloss?</p></i>
 
  
-  <%= f.text_area :comment %>
+  <%= f.text_area :comment, size: "30x10"%>
 
 
  <%= f.hidden_field :lip_gloss_id %>

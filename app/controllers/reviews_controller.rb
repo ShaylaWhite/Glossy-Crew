@@ -5,10 +5,21 @@ class ReviewsController < ApplicationController
         @review = @lip_gloss.reviews.build
     end 
 
-    def index
+    def create 
+        @review = Review.new(review_params)
+        if @review.save
+             redirect_to review_path(@review)
+        else
+            render :new
+        end
     end 
     
+    def show 
+      @review.ice_cream
+    end 
 
-
+     def review_params
+        params.require(:review).permit(:lip_gloss_id, :purchase, :comment)
+     end 
 
 end
