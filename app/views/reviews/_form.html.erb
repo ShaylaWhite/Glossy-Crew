@@ -1,0 +1,20 @@
+<div class="form">
+<%= form_for(@review) do |f|%>
+
+  <p><i> Is this gloss worth the purchase? <br> <br> Select if 'yes' </p></i>
+  <%= f.check_box :purchase, :checked_value => "yes", :unchecked_value => "no" %>
+   
+
+   <p><i> What are your thoughts about this gloss?</p></i>
+
+ 
+  <%= f.text_area :comment %>
+
+
+ <%= f.hidden_field :lip_gloss_id %>
+   <br>
+   <br>
+  <%= f.submit "Add New Review" %>
+<% end %>
+
+</div>
