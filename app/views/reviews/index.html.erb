@@ -1,0 +1,19 @@
+
+<h1> All of Your Reviews </h1>
+
+
+<% if @lip_gloss %>
+  <h1>Reviews for <%= @lip_gloss.name%> - <%= @lip_gloss.sponsor_name%></h1>
+<% else %>
+  <h1>All the Reviews </h1>
+<% end %>
+
+<ul>
+<% @reviews.each do |review| %>
+
+  <li>
+    <%= @review.lip_gloss.name%>: <%= link_to @review.comment, review_path(review)%> - <%= @review.purchase%>
+  </li> <br>
+
+<% end %>
+</ul>
