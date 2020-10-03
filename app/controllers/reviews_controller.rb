@@ -27,7 +27,7 @@ def edit
 end
 
 def index
-    if @lip_gloss = LipGloss.find_by_id(params[:lip_gloss_id])
+    if @lip_gloss = LipGloss.find_by_id(params[:lip_gloss_id]) #nested
         @reviews = @lip_gloss.reviews
     else
         @reviews = Review.all

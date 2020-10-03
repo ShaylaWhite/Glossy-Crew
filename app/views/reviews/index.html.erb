@@ -1,14 +1,12 @@
-<% if @lip_gloss %>
-  <h1>Reviews for <%= @review.lip_gloss.name%> - <%= @review.lip_gloss.sponsor_name%></h1>
-<% else %>
+
   <h1>All the Reviews </h1>
-<% end %>
+
 
      <ul>
 
      <% @reviews.each do |r| %>
-     <li>
-     <h4> <% r.user %> <%= r.user.username %> posted: </h4>
+     <li >
+     <h2><%= r.lip_gloss.name %></h2>
      <p> Would your purchase this lip gloss? <br> <%= r.purchase.humanize%><p>
      <p>Comments about the lip gloss: <br> <%= r.comment %></p>
      <p> Created-at <%= r.created_at %></p>
