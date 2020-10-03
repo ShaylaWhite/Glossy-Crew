@@ -8,4 +8,9 @@ class LipGloss < ApplicationRecord
   def sponsor_attributes(attributes)
     sponsor = Sponsor.find_or_create_by(attributes) if !name.empty
   end 
+
+  def name_of_sponsor
+    "#{name} - #{sponsor.name}"
+   end
+
 end

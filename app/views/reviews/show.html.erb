@@ -1,7 +1,19 @@
  
- <h1>Thanks For Your Review</h1>
+
+<h1><p> | The Results Are In  <%= @review.lip_gloss.name%> - </h1>| </p> </h1>
+
  <div class="form">
-<p>The Results Are In For <%= @review.lip_gloss.name%></p>
- <p><%= @review.purchase%></p> 
+
+
+<b><i>Would you purchase this gloss? </i></b>
+<p> <%= @review.purchase.humanize%>  </p>
+
+
+<b><i>Thoughts and comments about this gloss: </i></b>  
+
+
 <p><%= @review.comment%></p>
 </div>
+
+<h1>Thanks For Your Review ! </h1>
+

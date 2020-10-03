@@ -11,20 +11,21 @@ def create
         if @lip_gloss.save
           redirect_to lip_gloss_path(@lip_gloss)
         else
+         @lip_gloss.build_sponsor
           render :new
      end
 end 
 
 def index
-   @lip_gloss = LipGloss.all
+   @lip_glosses = LipGloss.all
 end
 
 def edit
-   @lip_gloss = LipGloss.find(params[:id])
+  
  end
 
 def show
-   @lip_gloss = LipGloss.find(params[:id])
+   
 end 
 
 

@@ -7,16 +7,18 @@
    
    <ul>
       <% @lip_gloss.each do |c| %>
-      <li><%= link_to c.name, {:action => 'show', :id => c.id} -%> </li>
+      <li > * <%= link_to c.name, {:action => 'show', :id => c.id} %> * <br> </li>
       <% end %>
       
-      <center> <p> You so Glossy!</p> </center>
       
-      <center><bold> \ <%= link_to "Add a New Gloss", {:action => 'new' }%> \ </center>   </bold>
+      
+      <center> <h2> <bold> \ <%= link_to "Add a New Gloss", {:action => 'new' }%> \ </center> </h2>  </bold>
       <br>
-      
+ 
  
    </ul>
-
+  
 
 </div>
+
+<h1> <center> <p> You're so Glossy! Keep Shining! </p> </center>  </h1>

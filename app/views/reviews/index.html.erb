@@ -1,19 +1,21 @@
-
-<h1> All of Your Reviews </h1>
-
-
 <% if @lip_gloss %>
-  <h1>Reviews for <%= @lip_gloss.name%> - <%= @lip_gloss.sponsor_name%></h1>
+  <h1>Reviews for <%= @review.lip_gloss.name%> - <%= @review.lip_gloss.sponsor_name%></h1>
 <% else %>
   <h1>All the Reviews </h1>
 <% end %>
 
-<ul>
-<% @reviews.each do |review| %>
+     <ul>
 
-  <li>
-    <%= @review.lip_gloss.name%>: <%= link_to @review.comment, review_path(review)%> - <%= @review.purchase%>
-  </li> <br>
+     <% @reviews.each do |r| %>
+     <li>
+     <h4> <% r.user %> <%= r.user.username %> posted: </h4>
+     <p> Would your purchase this lip gloss? <br> <%= r.purchase.humanize%><p>
+     <p>Comments about the lip gloss: <br> <%= r.comment %></p>
+     <p> Created-at <%= r.created_at %></p>
+     <hr>
+    </li>
+      <% end %>
+    </ul>
+   
 
-<% end %>
-</ul>
+ </div>

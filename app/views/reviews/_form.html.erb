@@ -1,16 +1,17 @@
 <%= form_for(@review) do |f|%>
     <% if params[:lip_gloss_id] %>
-      <%= f.hidden_field :lip_gloss_id %>
+    <%= f.hidden_field :lip_gloss_id %>
+  
     <% else %>
-    <br>
+
       <div>
         <%= f.label :lip_gloss_id, "Select The Gloss" %>
-        <hr>
-        <%= f.collection_select :lip_gloss_id, LipGloss.all, :id, :name, include_blank: true %>
+        <%= f.collection_select :lip_gloss_id, LipGloss.all, :id, :name_of_sponsor, include_blank: true %>
       </div>
-    <% end %>
-    <div>
+   <% end %>
+ 
     <br>
+    <div>
       <%= f.label :purchase %>
       <hr>
       <%= f.select :purchase, [["Yes", true], ["No", false]], :include_blank => true %>
@@ -19,13 +20,13 @@
     <div>
       <%= f.label :comment %>
       <hr>
-      <%= f.text_field :comment, size: "23x432" %>
+      <%= f.text_area :comment, size: "23x8" %>
     </div>
     <br>
-    <br>
+
   
-  
-  
+    <%= f.hidden_field :lip_gloss_id %>
+
     <%= f.submit %>
-  
+
   <% end %>
