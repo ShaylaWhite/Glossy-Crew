@@ -1,6 +1,9 @@
 
-  <h1>All the Reviews </h1>
-
+<% if @lip_gloss %>
+<h1>Reviews for <%= @lip_gloss.flavor%> - <%= @lip_gloss.brand_name%></h1>
+<% else %>
+<h1>All the Reviews </h1>
+<% end %>
 
      <ul>
 
