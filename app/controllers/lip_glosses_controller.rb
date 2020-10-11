@@ -10,6 +10,8 @@ def create
     @lip_gloss.user_id = session[:user_id]
         if @lip_gloss.save
           redirect_to lip_gloss_path(@lip_gloss)
+
+         
         else
         
           render :new

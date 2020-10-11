@@ -5,16 +5,28 @@ class LipGloss < ApplicationRecord
   has_many :users, through: :reviews 
   accepts_nested_attributes_for :sponsor
 
-  validates :sponsor, presence: true
-  validate :not_a_duplicate
+  validates :name, presence: true
+  validates :price, presence: true
+  validate :already_exist
 
-  
   def sponsor_attributes(attributes)
     sponsor = Sponsor.find_or_create_by(attributes) if !name.empty
   end 
 
-  def name_of_sponsor
+
+  def already_exist
+  if LipGloss.find_by(name: name,price: price) 
+    errors.add(:name, 'has already been added for that price')
+  end
+end
+
+
+
+ def name_of_sponsor
     "#{name} - #{sponsor.name}"
    end
+
+
+  
 
 end

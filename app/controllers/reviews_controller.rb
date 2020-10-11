@@ -1,6 +1,5 @@
 class ReviewsController < ApplicationController
 
-  <%= render 'layouts/errors', locals: {message: @review} %>
 
   def new
     if @lip_gloss = LipGloss.find_by_id(params[:lip_gloss_id])
@@ -12,7 +11,7 @@ end
 
 def create
   @review = current_user.reviews.build(reviews_params)
-  if @review.save!
+  if @review.save
     redirect_to review_path(@review)
   else
     render :new
