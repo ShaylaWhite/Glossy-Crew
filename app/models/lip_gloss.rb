@@ -5,6 +5,8 @@ class LipGloss < ApplicationRecord
   has_many :users, through: :reviews 
   accepts_nested_attributes_for :sponsor
 
+
+  
   def sponsor_attributes(attributes)
     sponsor = Sponsor.find_or_create_by(attributes) if !name.empty
   end 
