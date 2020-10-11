@@ -5,6 +5,8 @@ class LipGloss < ApplicationRecord
   has_many :users, through: :reviews 
   accepts_nested_attributes_for :sponsor
 
+  validates :sponsor, presence: true
+  validate :not_a_duplicate
 
   
   def sponsor_attributes(attributes)
