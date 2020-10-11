@@ -19,7 +19,8 @@ def create
 end 
 
 def index
-   @lip_gloss = LipGloss.all
+
+      @lip_glosses = LipGloss.order_by_review
 end
 
 def edit

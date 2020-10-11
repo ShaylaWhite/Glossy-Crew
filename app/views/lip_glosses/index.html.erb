@@ -6,7 +6,7 @@
 <div class="form">  
    
    <ul>
-      <% @lip_gloss.each do |c| %>
+      <% @lip_glosses.each do |c| %>
       <li > * <%= link_to c.name, {:action => 'show', :id => c.id} %> * <p>$<%= c.price %></p> <br> 
       <%= link_to "Write a review", new_lip_gloss_review_path(c.id)%></li>
       

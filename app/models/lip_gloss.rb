@@ -9,6 +9,13 @@ class LipGloss < ApplicationRecord
   validates :price, presence: true
   validate :already_exist
 
+
+
+  scope :order_by_review, -> {left_joins(:reviews).group(:id).order("price desc")}
+
+
+
+
   def sponsor_attributes(attributes)
     sponsor = Sponsor.find_or_create_by(attributes) if !name.empty
   end 
