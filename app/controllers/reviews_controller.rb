@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
 
+  <%= render 'layouts/errors', locals: {message: @review} %>
+
   def new
     if @lip_gloss = LipGloss.find_by_id(params[:lip_gloss_id])
         @review = @lip_gloss.reviews.build
