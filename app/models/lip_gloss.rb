@@ -22,7 +22,7 @@ end
 
 
 
- def name_of_sponsor
+ def name_of_sponsor #reader
     "#{name} - #{sponsor.name}"
    end
 
