@@ -25,4 +25,8 @@ class SessionsController < ApplicationController
         redirect_to '/', notice: "You have successfully logged out."
     end
     
+
+    def omniauth
+        byebug
+    end 
 end
