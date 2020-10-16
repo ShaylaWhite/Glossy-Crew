@@ -1,7 +1,0 @@
-<div>
-<h3>Filter :</h3>
-<%= form_tag("/lip_glosses", method: "get") do %>
-  <%= select_tag "name", options_for_select(["Today", "Past"]), include_blank: true %>
-  <%= submit_tag "Filter" %>
-<% end %>
-</div>

@@ -14,7 +14,20 @@
       
       
       
-      <center> <h2> <bold> \ <%= link_to "Add a New Gloss", {:action => 'new' }%> \ </center> </h2>  </bold>
+      <center> 
+      
+      <h2> <bold> \ <%= link_to "Add a New Gloss", {:action => 'new' }%> \ </h2>  </bold>
+      <br>
+      <%= link_to "Show Lip Gloss", lip_gloss_path(c.id) %>
+      <br>
+      <%= link_to "Edit Lip Gloss", edit_lip_gloss_path(c.id) if c.user_id == session[:user_id] %>
+      <br>
+      <%= link_to "Delete Lip Gloss", lip_gloss_path(c), :confirm => "Are you sure?", :method => :delete if c.user_id == session[:user_id] %>
+      <br>
+      <%= link_to "Add a comment", new_lip_gloss_comment_path(c.id) %>
+      </div>
+      
+      </center>
       <br>
  
  
