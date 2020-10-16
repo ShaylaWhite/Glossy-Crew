@@ -16,6 +16,13 @@
 
 
 
+<% @reviews.all.each do |c| %>
+     <h5>Comment - <%= c.comment %></h5>
+   <h5> Created-at <%= c.created_at %></h5>
+   <hr>
+   <% end %> 
+   <%= link_to  "View reviews", lip_gloss_reviews_path(@lip_gloss) %>
+
 
 
 
