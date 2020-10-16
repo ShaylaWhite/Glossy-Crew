@@ -6,12 +6,12 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-          session[:user_id] = @user.id
+          create_session
           redirect_to user_path(@user)
-        else
+      else
           render :new
-        end
       end
+  end
     
       def show
         #redirect_if_not_logged_in
