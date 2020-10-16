@@ -37,6 +37,23 @@ class LipGlossesController < ApplicationController
    end 
 
 
+   def update
+      if @lip_gloss.update()lip_gloss_params
+          redirect_to lip_gloss_path
+      else
+          render :edit
+      end
+end
+
+def destroy 
+  if current_user_check != @lip_gloss.user_id
+      redirect_to user_path(session[:user_id])
+  else 
+      @lip_gloss.destroy
+      redirect_to lip_gloss_path
+  end
+end
+
    private
    
    def lip_gloss_params
