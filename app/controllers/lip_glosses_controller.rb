@@ -1,4 +1,8 @@
 class LipGlossesController < ApplicationController
+   before_action :require_login
+   before_action :set_lip_gloss, only: [:edit, :update, :show, :destroy]
+   
+
 
    def new
       @lip_gloss = LipGloss.new 
@@ -28,6 +32,7 @@ class LipGlossesController < ApplicationController
 
    def show
       @lip_gloss = LipGloss.find_by_id(params[:id])
+      @reviews = @lip_gloss.reviews
 
    end 
 
