@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-
+  before_action :require_login
 
   def new
     if @lip_gloss = LipGloss.find_by_id(params[:lip_gloss_id])
