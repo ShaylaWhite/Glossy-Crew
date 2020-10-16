@@ -12,7 +12,12 @@
 
   <body>
 
+  
+  <% if logged_in? %>
+
   <%= render "layouts/navbar" %>
+
+  <% end %>
     <%= yield %>
   </body>
 </html>
