@@ -1,11 +1,22 @@
 class ApplicationController < ActionController::Base
 
-    private
+  helper_method :logged_in?
+  helper_method :create_session
+  helper_method :current_user_check
 
-    def current_user
-        @current_user ||= User.find_by_id(session[:user_id]) 
-      end
+  def require_login
+      redirect_to login_path unless session[:user_id]
+  end
 
+  def logged_in?
+    session[:user_id] ? true : false
+  end
 
-      ##In short, a||=b means: If a is undefined, nil or false, assign b to a. Otherwise, keep a intact.
+  def create_session
+    session[:user_id] = @user.id
+  end
+
+  def current_user_check
+    session[:user_id]
+  end
 end
