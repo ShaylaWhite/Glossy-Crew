@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
             session[:user_id] = @user.id
             redirect_to user_path(@user)
       
-        else 
+        elsif
         @user = User.find_by(username: params[:user][:username]) #find person
         @user && @user.authenticate(params[:user][:password]) #check password
             session[:user_id] = @user.id
