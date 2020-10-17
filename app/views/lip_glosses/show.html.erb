@@ -2,16 +2,10 @@
 
 
 <div class="form"> 
-<p>
-   <strong>Price: </strong> $<%= @lip_gloss.price %><br />
-   <strong>Created Date:</strong> <%= @lip_gloss.created_at.strftime("%d %b. %Y") %><br />
-</p>
 
-<br></br>
+   <strong>Price: </strong> $<%= @lip_gloss.price %><br />
 
 <%= link_to "Edit #{@lip_gloss.name}", edit_lip_gloss_path(@lip_gloss) %>
-<%= link_to "Delete #{@lip_gloss.name}", edit_lip_gloss_path(@lip_gloss) %>
-</div>
 
 
 
@@ -25,4 +19,4 @@
 
 
 
-
+</div>

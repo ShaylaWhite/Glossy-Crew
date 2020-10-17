@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :logged_in?
   helper_method :create_session
-  helper_method :current_user_check
+  helper_method :current_user
 
   def require_login
       redirect_to login_path unless session[:user_id]
@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     session[:user_id] = @user.id
   end
 
-  def current_user_check
+  def current_user
     session[:user_id]
   end
 end

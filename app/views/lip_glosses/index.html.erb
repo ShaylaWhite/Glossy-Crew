@@ -2,38 +2,32 @@
 
 <h1> All Lip Gloss </h1>
 
+\ Youre so Glossy! \ <%= link_to "Add a New Gloss", {:action => 'new' }%> \ 
 
 <div class="form">  
-   
+   <hr>
    <ul>
       <% @lip_glosses.each do |c| %>
-      <li > * <%= link_to c.name, {:action => 'show', :id => c.id} %> * <p>$<%= c.price %></p> <br> 
-      <%= link_to "Write a review", new_lip_gloss_review_path(c.id)%></li>
+      <li > Name: <%= link_to c.name, {:action => 'show', :id => c.id} %> </li>
       
-      <% end %>
+       <li> Price: $<%= c.price %> </li>
       
+      <li>
+      <%= link_to "Show Lip Gloss", lip_gloss_path(c.id) %> 
       
-      
-      <center> 
-      
-      <h2> <bold> \ <%= link_to "Add a New Gloss", {:action => 'new' }%> \ </h2>  </bold>
-      <br>
-      <%= link_to "Show Lip Gloss", lip_gloss_path(c.id) %>
-      <br>
-      <%= link_to "Edit Lip Gloss", edit_lip_gloss_path(c.id) if c.user_id == session[:user_id] %>
-      <br>
-      <%= link_to "Delete Lip Gloss", lip_gloss_path(c), :confirm => "Are you sure?", :method => :delete if c.user_id == session[:user_id] %>
-      <br>
-      <%= link_to "Add a comment", new_lip_gloss_comment_path(c.id) %>
+      <%= link_to "Edit #{c.name}", edit_lip_gloss_path(c.id) %>
+      <%= link_to 'Delete', lip_gloss_path, method: :delete %> #-> @lip_gloss doesn't exist %>
+
+     </li>
       </div>
       
-      </center>
-      <br>
+    
+   <hr>
  
  
    </ul>
-  
+    <% end %>
+      
 
 </div>
 
-<h1> <center> <p> You're so Gloss

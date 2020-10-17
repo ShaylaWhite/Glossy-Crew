@@ -1,8 +1,10 @@
 class LipGlossesController < ApplicationController
-   before_action :require_login
    before_action :set_lip_gloss, only: [:edit, :update, :show, :destroy]
-   
 
+  
+   before_action :require_login
+
+ 
 
    def new
       @lip_gloss = LipGloss.new 
@@ -16,42 +18,39 @@ class LipGlossesController < ApplicationController
             redirect_to lip_gloss_path(@lip_gloss)
             
          else
-             @lip_gloss.build_sponsor
             render :new
       end
    end 
 
    def index
-
+   
          @lip_glosses = LipGloss.order_by_review
    end
 
-   def edit
-   
-   end
-
    def show
-      @lip_gloss = LipGloss.find_by_id(params[:id])
-      @reviews = @lip_gloss.reviews
+     
 
    end 
 
+   def edit
+
+ end
 
    def update
-      if @lip_gloss.update()lip_gloss_params
-          redirect_to lip_gloss_path
+      if @lip_gloss.update(lip_gloss_params)
+          redirect_to lip_glosses_path
       else
           render :edit
       end
 end
 
 def destroy 
-  if current_user_check != @lip_gloss.user_id
-      redirect_to user_path(session[:user_id])
-  else 
-      @lip_gloss.destroy
-      redirect_to lip_gloss_path
-  end
+   if current_user != @lip_glosses.user_id
+       redirect_to user_path(session[:user_id])
+   else 
+       @lip_gloss.destroy
+       redirect_to lip_glosses_path
+   end
 end
 
    private
