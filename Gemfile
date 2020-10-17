@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.7'
  gem 'dotenv-rails'
  gem 'jquery-rails'
 
- gem 'boostrap'
+ gem 'bootstrap'
  gem 'jquery-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
