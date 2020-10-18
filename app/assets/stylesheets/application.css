@@ -1,8 +1,7 @@
 @import "bootstrap/scss/bootstrap";
 
-* {
-   background-color: #FFE4C4;	
-}
+
+
 .homepage  {
     background-image: url('glossy.png');
     background-repeat: repeat;
@@ -15,8 +14,18 @@
 h1 { 
     font-family: 'Homemade Apple', cursive;
     color: #DB7093;
-
+    font-size: xx-large;
 }
+
+a:link, a:visited {
+    color: #DB7093;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
 
 .vertical-center {
     height:100%;
