@@ -1,18 +1,18 @@
 @import "bootstrap/scss/bootstrap";
 
 
-
 .homepage  {
     background-image: url('glossy.png');
     background-repeat: repeat;
     background-attachment: fixed;
-    height: 350px; 
+    height: 305px; 
     background-position: bottom;
     background-size:  auto;
   }
 
 h1 { 
-    font-family: 'Homemade Apple', cursive;;
+    font-family: 'Homemade Apple', cursive;
+    color: #DB7093;
 
 }
 
