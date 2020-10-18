@@ -6,28 +6,30 @@
 
 <div class="form">  
    <hr>
-   <ul>
+
       <% @lip_glosses.each do |c| %>
-      <li > Name: <%= link_to c.name, {:action => 'show', :id => c.id} %> </li>
+   Name: <%= c.name %>
+      <hr>
+   Price: $<%= c.price %> 
       
-       <li> Price: $<%= c.price %> </li>
-      
-      <li>
+  <hr>
       <%= link_to "Show Lip Gloss", lip_gloss_path(c.id) %> 
-      
-      <%= link_to "Edit #{c.name}", edit_lip_gloss_path(c.id) %>
-      <%= link_to 'Delete', lip_gloss_path, method: :delete %> #-> @lip_gloss doesn't exist %>
+   
 
-     </li>
-      </div>
-      
-    
    <hr>
- 
- 
-   </ul>
+      <%= link_to "Edit", edit_lip_gloss_path(c.id) %>
+      
+<hr>
+   
+      <%= button_to "Delete", lip_gloss_path(c), :confirm => "Are you sure?", :method => :delete %>
+
+
+    
+   
     <% end %>
+ 
+<hr>
+   </div>
       
 
-</div>
-
+   

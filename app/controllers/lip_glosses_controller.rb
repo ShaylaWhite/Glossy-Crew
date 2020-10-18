@@ -28,7 +28,7 @@ class LipGlossesController < ApplicationController
    end
 
    def show
-     
+      @reviews = @lip_gloss.reviews
 
    end 
 
@@ -45,7 +45,8 @@ class LipGlossesController < ApplicationController
 end
 
 def destroy 
-   if current_user != @lip_glosses.user_id
+
+   if current_user != @lip_gloss.user_id
        redirect_to user_path(session[:user_id])
    else 
        @lip_gloss.destroy
