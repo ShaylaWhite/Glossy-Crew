@@ -1,6 +1,17 @@
 @import "bootstrap/scss/bootstrap";
 
 
+
+body {
+    background-image: url('glossy.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px; 
+    background-position: center;
+  }
+
+
+
 .vertical-center {
     height:100%;
     width:100%;
