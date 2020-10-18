@@ -1,16 +1,19 @@
+<br>
+<center>
 <header class='clearfix'>
   <% if session[:user_id] %>
   <hr>
     <ul>
-    <%= link_to 'logout', logout_path, :method => :delete %> |
-    <%= link_to "new gloss", new_lip_gloss_path %> |
-    <%= link_to "all glosses", lip_glosses_path %> |
-    <%= link_to "new review", new_review_path %> |
-    <%= link_to "all reviews", reviews_path %> |
-    <%= link_to "all sponsors", sponsors_path %> |
+    <%= link_to 'Logout', logout_path, :method => :delete %> |
+    <%= link_to "New Gloss", new_lip_gloss_path %> |
+    <%= link_to "All Glosses", lip_glosses_path %> |
+    <%= link_to "New Review", new_review_path %> |
+    <%= link_to "All Reviews", reviews_path %> |
+    <%= link_to "All Sponsors", sponsors_path %> |
     
     </ul>
   </div> 
   
   <% end %>
 </header>
+</center>
