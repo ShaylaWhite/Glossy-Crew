@@ -6,7 +6,7 @@
     background-image: url('glossy.png');
     background-repeat: repeat;
     background-attachment: fixed;
-    height: 305px; 
+    height: 4px; 
     background-position: center;
     background-size:  auto;
   }
@@ -18,10 +18,11 @@ h1 {
 }
 
 a:link, a:visited {
-    background-color: 1px solid #DB7093;
     font-family: 'Homemade Apple', cursive;
- 
-
+    color: #DB7093;
+    padding: 12px;50
+    width: 4px;
+    text-align: center;
   }
 
 
