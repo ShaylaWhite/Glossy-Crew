@@ -1,6 +1,8 @@
 @import "bootstrap/scss/bootstrap";
 
-
+* {
+   background-color: #FFE4C4;	
+}
 .homepage  {
     background-image: url('glossy.png');
     background-repeat: repeat;
