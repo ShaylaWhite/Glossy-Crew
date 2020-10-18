@@ -1,12 +1,7 @@
 <header class='clearfix'>
-  <div class="left-nav">
   <% if session[:user_id] %>
-      <%= link_to 'Logout', logout_path, :method => :delete %>
-
-  </div>
-
-  <div class="right-nav">
     <ul>
+    <%= link_to 'Logout', logout_path, :method => :delete %> |
     <%= link_to "New Gloss", new_lip_gloss_path %> |
     <%= link_to "My Lip GLosses", lip_glosses_path %> |
     <%= link_to "Add a Review", new_review_path %> |
