@@ -11,18 +11,24 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+    </style>
+
 
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
   </head>
 
   <body>
 
-  
+  <div class="homepage">
   <% if logged_in? %>
 
   <%= render "layouts/navbar" %>
 
   <% end %>
+  </div>
     <%= yield %>
+  
   </body>
 </html>

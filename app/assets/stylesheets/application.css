@@ -2,20 +2,24 @@
 
 
 
-body {
+.homepage  {
     background-image: url('glossy.png');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
-    height: 500px; 
-    background-position: center;
+    height: 350px; 
+    background-position: bottom;
+    background-size:  auto;
   }
 
+h1 { 
+    font-family: 'Homemade Apple', cursive;;
 
+}
 
 .vertical-center {
     height:100%;
     width:100%;
-  
+    background-color: white;
     text-align: center;  /* align the inline(-block) elements horizontally */
     font: 0/0 a;         /* remove the gap between inline(-block) elements */
   }
