@@ -21,14 +21,14 @@
 
   <body>
 
-  <div class="homepage">
   <% if logged_in? %>
 
   <%= render "layouts/navbar" %>
 
   <% end %>
-  </div>
     <%= yield %>
   
   </body>
+
+   
 </html>
