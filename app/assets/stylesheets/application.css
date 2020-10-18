@@ -25,6 +25,12 @@ h1 {
     font-size: xx-large;
 }
 
+h2 {
+
+    font-family: 'Homemade Apple', cursive;
+
+}
+
 a:link, a:visited {
     font-family: 'Homemade Apple', cursive;
     color: #DB7093;
