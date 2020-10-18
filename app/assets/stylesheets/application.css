@@ -1,5 +1,9 @@
 @import "bootstrap/scss/bootstrap";
 
+li {
+    list-style: none;
+}
+
 .background {
     position: top;
     width: 100%;
