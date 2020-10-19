@@ -1,16 +1,21 @@
+<center><p> <%= flash[:notice] if flash %></p></center>
+<div class="jumbotron vertical-center">
+<div class="container">
+  <h1 class="display-4">- All Lip Glosses- </h1>
+  <p class="lead">
 
 
-<h1> All Lip Gloss </h1>
 
-\ Youre so Glossy! \ <%= link_to "Add a New Gloss", {:action => 'new' }%> \ 
 
-<div class="form">  
+\ <%= link_to "Add a New Gloss", {:action => 'new' }%> \ 
+
+
    <hr>
 
       <% @lip_glosses.each do |c| %>
-   Name: <%= c.name %>
+   <h2>Name: </h2><%= c.name %>
       <hr>
-   Price: $<%= c.price %> 
+   <h2>Price:</h2>$<%= c.price %> 
       
   <hr>
       <%= link_to "Show Lip Gloss", lip_gloss_path(c.id) %> 
@@ -21,15 +26,19 @@
       
 <hr>
    
-      <%= button_to "Delete", lip_gloss_path(c), :confirm => "Are you sure?", :method => :delete %>
+<%= button_to "Delete", lip_gloss_path(c), :confirm => "Are you sure?", :method => :delete %>
 
 
-    
+    <hr>
+    <hr>
    
     <% end %>
  
 <hr>
-   </div>
+
+</div>
+</div>
+   
       
 
    

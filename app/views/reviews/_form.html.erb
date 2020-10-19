@@ -8,6 +8,7 @@
 <%else%>
 
 <h1>Add Review </h1>
+<br>
 <%end%>
 
 <%= form_for(@review) do |f|%>
@@ -26,14 +27,13 @@
     <br>
     <div>
       <%= f.label :purchase %>
-      <hr>
+  
       <%= f.select :purchase, [["Yes", true], ["No", false]], :include_blank => true %>
     </div>
     <br>
     <div>
       <%= f.label :comment %>
-      <hr>
-      <%= f.text_area :comment, size: "23x8" %>
+      <%= f.text_area :comment, size: "25X5" %>
     </div>
     <br>
 

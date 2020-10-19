@@ -1,7 +1,15 @@
-<h1>New Lip Gloss</h1>
 
 <%= render partial: 'layouts/errors', locals: {message: @lip_gloss} %>
 
-<%= render 'form' %>
+<div class="jumbotron vertical-center">
+<div class="container">
+  <h1 class="display-4">- Add New Lip Gloss - </h1>
+  <p class="lead">
 
+
+<%= render 'form' %>
+<hr>
 <%= link_to  "Cancel", user_path(session[:user_id]) %>
+
+</div>
+</div>
