@@ -19,7 +19,7 @@
     <p>Please Select the Gloss Sponsor:</p>
     
     <div>
-    <%= f.collection_select(:sponsor_id,Sponsor.all, :id, :name) %>
+    <%= f.collection_select(:sponsor_id,Sponsor.all, :id, :name, include_blank: true ) %>
     </div>
 
 

@@ -38,9 +38,12 @@ class LipGlossesController < ApplicationController
 
    def update
       if @lip_gloss.update(lip_gloss_params)
-          redirect_to lip_glosses_path
+          redirect_to lip_glosses_path  
+        flash[:notice] = "You have successfully updated this Lip Gloss."
+
       else
           render :edit
+
       end
 end
 
