@@ -8,7 +8,7 @@ class User < ApplicationRecord
     validates :password, length: { in: 6..100 }
     
 
-    def self.create_by_google_omniauth(auth)
+    def self.create_google_omniauth(auth)
         self.find_or_create_by(username: auth[:info][:email]) do |u|
           u.password = SecureRandom.hex
         end

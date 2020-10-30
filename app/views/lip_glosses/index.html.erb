@@ -16,18 +16,18 @@
    <h2>Name: </h2><%= c.name %>
       <hr>
    <h2>Price:</h2>$<%= c.price %> 
-      
+   <h2>Belongs to the User - <%= c.user.username %></h2>
+ 
   <hr>
       <%= link_to "Show Lip Gloss", lip_gloss_path(c.id) %> 
    
 
    <hr>
-      <%= link_to "Edit", edit_lip_gloss_path(c.id) %>
+      <%= link_to "Edit", edit_lip_gloss_path(c.id) if c.user_id == session[:user_id] %>
       
 <hr>
    
-<%= button_to "Delete", lip_gloss_path(c), :confirm => "Are you sure?", :method => :delete %>
-
+<%= button_to "Delete", lip_gloss_path(c),:confirm => "Are you sure?", :method => :delete if c.user_id == session[:user_id] %>
 
     <hr>
     <hr>
