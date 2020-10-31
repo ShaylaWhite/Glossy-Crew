@@ -13,8 +13,9 @@ class LipGloss < ApplicationRecord
 
   scope :order_by_review, -> {left_joins(:reviews).group(:id).order("price desc")}
 
-
-
+  def self.search(search)
+    where("name LIKE ?", "%#{search}%") 
+  end
 
   def sponsor_attributes(attributes)
     sponsor = Sponsor.find_or_create_by(attributes) if !name.empty

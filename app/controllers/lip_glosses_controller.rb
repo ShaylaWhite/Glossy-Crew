@@ -23,9 +23,15 @@ class LipGlossesController < ApplicationController
    end 
 
    def index
-   
+      @lip_glosses = LipGloss.all
+
+      if params[:search]
+         @lip_glosses = LipGloss.search(params[:search])
+         flash[:notice] = "Search Results"
+      else 
          @lip_glosses = LipGloss.order_by_review
    end
+end 
 
    def show
       @reviews = @lip_gloss.reviews
@@ -33,8 +39,7 @@ class LipGlossesController < ApplicationController
    end 
 
    def edit
-
- end
+   end 
 
    def update
       if @lip_gloss.update(lip_gloss_params)

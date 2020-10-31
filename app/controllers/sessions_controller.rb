@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     
     def create
         @user = User.find_by(username: params[:user][:username])
-        if @user && @user.authenticate(params[:user][:password])
+        if @user && @user.authenticate(params[:user][:password]) #check is password matcehes and user exist, then takes in the id of the user and stores it into a session while they are logged in
             create_session
             redirect_to user_path(@user)
         else

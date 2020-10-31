@@ -4,11 +4,21 @@
   <h1 class="display-4">- All Lip Glosses- </h1>
   <p class="lead">
 
+  <% if @lip_gloss_path.present? %>
+  <%= render @lipglosses %>
+<% else %>
+<% end %>
 
+  <%= form_tag(lip_glosses_path, :method => "get", id: "search-form") do %>
+   <%= text_field_tag :search, params[:search], placeholder: "Search Lip Glosses" %>
+   <%= submit_tag "Search" %>
+   <% end %>
 
+   <hr>
+   <hr>
 
-\ <%= link_to "Add a New Gloss", {:action => 'new' }%> \ 
-
+| <%= link_to "Add a New Gloss", {:action => 'new' }%> |
+| <%= link_to "All Glosses", lip_glosses_path %> |
 
    <hr>
 
@@ -37,6 +47,8 @@
 <hr>
 
 </div>
+
+
 </div>
    
       
